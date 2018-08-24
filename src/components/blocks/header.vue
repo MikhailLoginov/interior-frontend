@@ -3,20 +3,23 @@
   HEADER
     .container
       .header
-        A(href="/index.html")
+        <router-link to="/">
           img(src="../../assets/images/logo.png" alt="logo")
+        </router-link>
+          
         NAV
           ul.nav-menu
             li
-              A(href="/index.html") Home
+              <router-link to="/">Home</router-link>
             li
-              A(href="/products.html") Products
+              A(href="") Products
             li
-              A(href="#") History
+              //A(href="#") History
+              <router-link to="/product">History</router-link>
             li
-              A(href="/product-details.html") Showroom
+              <router-link to="/showroom">Showroom</router-link>
             li
-              A(href="/contacts.html") Contact
+              <router-link to="/contacts">Contact</router-link>
           A(href="#")
             img(src="../../assets/images/search.png" alt="search")
   // Header ends 

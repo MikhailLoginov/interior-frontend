@@ -1,10 +1,57 @@
+<template lang="pug">
+  // Products-range section starts 
+  SECTION.section-products-range
+    .container
+      .products-range
+        .products-range__top-panel
+          h1 Our Products Range
+        UL.products-range__switcher
+          li.active
+            a(href="#") 
+              h3 All
+          li  
+            a(href="#")
+              h3 Home
+          li
+            a(href="#")
+              h3 Office
+          li
+            a(href="#")
+              h3 Furniture
+          li
+            a(href="#")
+              h3 Modern
+          li
+            a(href="#")
+              h3 Classic
+        .products-range__products
+          - for(let j = 0; j < 2; j++)
+            - for (let i = 1; i < 7; i++) 
+              .product(class=`product-${i}`)
+                .product__overlay
+                  BUTTON.product__btn-go
+                  h3 Fishnet Chair
+                  h5 Seat and back with upholstery made of cold cure foam
+        .products-range__bottom-panel
+          BUTTON.btn-show-more
+  // Products-range section ends 
+  
+</template>
+
+<script>
+export default {
+  name: "ProductsRange"
+}
+</script>
+
+<style lang="stylus" scoped>
 .products-range
   &__top-panel
     padding 244px 0 44px 99px
     background-color #f5f5f5
     h1
       letter-spacing -4px
-    +below(768px)
+    @media screen and (max-width 768px)
       padding 250px 0 44px 10px
 
   &__switcher
@@ -20,20 +67,20 @@
       bottom 0
       left 0
       width 300px
-    +below(768px)
+    @media screen and (max-width 768px)
       margin 50px 0 0 10px
     li
       display inline-block
-      +below(560px)
+      @media screen and (max-width 560px)
         display block
       font-weight 700
       padding 0 17px 17px 0
       margin-right 7px
-      +below(800px)
+      @media screen and (max-width 800px)
         padding 0 10px 10px 2px
       h3
         text-transform uppercase
-        +below(768px)
+        @media screen and (max-width 768px)
           font-size 14px
         color #6c6c6c
         text-decoration none
@@ -44,9 +91,9 @@
       &.active
         padding 0 29px 15px 5px !important
         border-bottom 3px solid #212121 !important
-        +below(600px)
+        @media screen and (max-width 600px)
           padding 0 10px 8px 2px !important
-        +below(560px)
+        @media screen and (max-width 560px)
           border none !important
         h3
           color #212121 !important
@@ -55,12 +102,12 @@
           &:active
             color rgb(217, 222, 225) !important
   .btn-explore
-    +below(600px)
+    @media screen and (max-width 600px)
       margin 0
 
   &__products
     margin 35px 82px 0 82px
-    +below(768px)
+    @media screen and (max-width 768px)
       margin 22px 10px 0 10px
     display flex
     flex-wrap wrap
@@ -113,3 +160,4 @@
     justify-content center
   .btn-show-more
     float center
+</style>
