@@ -1,25 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import MainPage from './components/pages/mainpage.vue'
-import ContactsPage from './components/pages/contactspage.vue'
-import ProductPage from './components/pages/productpage.vue'
+import Index from './components/pages/index.vue'
+import ContactsPage from './components/pages/contacts-page.vue'
+import ProductPage from './components/pages/product-page.vue'
 import Showroom from './components/pages/showroom.vue'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
-  {path: '/', component: MainPage},
+  {path: '/', component: Index},
   {path: '/contacts', component: ContactsPage},
   {path: '/product', component: ProductPage},
   {path: '/showroom', component: Showroom}
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes
-})
+});
 
 new Vue({
   router,

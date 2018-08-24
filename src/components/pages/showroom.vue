@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ProductsRange from '../blocks/productsrange.vue'
+import ProductsRange from '../blocks/products-range.vue'
 import Promo from '../blocks/promo.vue'
 
 export default {

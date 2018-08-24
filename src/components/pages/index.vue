@@ -16,7 +16,7 @@ import Promo from '../blocks/promo.vue'
 import Trending from '../blocks/trending.vue'
 import Slider from '../blocks/slider.vue'
 import Exclusive from '../blocks/exclusive.vue'
-import MobileApp from '../blocks/mobileApp.vue'
+import MobileApp from '../blocks/mobile-app.vue'
 
 export default {
   name: 'MainPage',

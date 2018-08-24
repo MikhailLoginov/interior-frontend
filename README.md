@@ -1,4 +1,4 @@
-# interior
+# Interior
 
 ## Project setup
 ```
