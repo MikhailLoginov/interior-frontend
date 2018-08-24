@@ -1,0 +1,20 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/hero/hero
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+include ../blocks/featured/featured
+include ../blocks/promo/promo
+include ../blocks/trending/trending
+include ../blocks/slider/slider
+include ../blocks/exclusive/exclusive
+include ../blocks/mobile-app/mobile-app
+
+block content
+  +hero()
+  +featured()
+  +promo()
+  +trending()
+  +slider()
+  +exclusive()
+  +mobile-app()

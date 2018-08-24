@@ -1,0 +1,47 @@
+mixin details()
+  // Details section starts 
+  SECTION.section-details
+    .container
+      +b.details
+        +b.products-menu
+          ul
+            li.active
+              a(href="#")
+                h3 ALL
+            li
+              a(href="#")
+                h3 HOME
+            li
+              a(href="#")
+                h3 OFFICE
+            li
+              a(href="#")
+                h3 FURNITURE
+            li
+              a(href="#")
+                h3 MODERN
+            li
+              a(href="#")
+                h3 CLASSIC
+        +e.content
+          +e.product
+            +e.big-pic
+            +e.preview
+              +e.product-preview.preview-1
+              +e.product-preview.preview-2
+              +e.product-preview.preview-3.active
+          +e.info
+            h2 Fishnet Chair
+            h3 HOT DEAL
+            +b.price
+              +e.currency $
+              +e.amount 36.7
+              +e.other /sq
+            +b.BUTTON.btn-order ORDER US
+            +e.text
+              p The majesty of Mountains - Ugmonk style.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta voluptatem, provident voluptatibus.
+              p Quam nulla assumenda suscipit voluptate? Inventore natus amet sit minima facilis aliquam maiores error dolorum consequuntur, expedita laboriosam deserunt ipsa, commodi.
+              p Facere repellendus deleniti sint ut quisquam nisi magnam quam itaque dignissimos odio, facilis perferendis. Nihil accusantium ullam earum et ad quod eaque tempore.
+              
+  // Details section ends 

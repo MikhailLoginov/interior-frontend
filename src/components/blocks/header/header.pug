@@ -1,0 +1,22 @@
+mixin header()
+  // Header starts 
+  HEADER
+    .container
+      .header
+        +e.A(href="/index.html")
+          img(src="/assets/images/logo.png" alt="logo")
+        NAV
+          ul.nav-menu
+            li
+              a(href="/index.html") Home
+            li
+              a(href="/products.html") Products
+            li
+              a(href="#") History
+            li
+              a(href="/product-details.html") Showroom
+            li
+              a(href="/contacts.html") Contact
+          a(href="#")
+            img(src="/assets/images/search.png" alt="search")
+  // Header ends 

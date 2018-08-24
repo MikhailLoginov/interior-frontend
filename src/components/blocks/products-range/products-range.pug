@@ -1,0 +1,37 @@
+mixin products-range()
+  // Products-range section starts 
+  SECTION.section-products-range
+    .container
+      +b.products-range
+        +e.top-panel
+          h1 Our Products Range
+        +e.UL.switcher
+          li.active
+            a(href="#") 
+              h3 All
+          li  
+            a(href="#")
+              h3 Home
+          li
+            a(href="#")
+              h3 Office
+          li
+            a(href="#")
+              h3 Furniture
+          li
+            a(href="#")
+              h3 Modern
+          li
+            a(href="#")
+              h3 Classic
+        +e.products
+          - for(let j = 0; j < 2; j++)
+            - for (let i = 1; i < 7; i++) 
+              +b.product(class=`product-${i}`)
+                +e.overlay
+                  +e.BUTTON.btn-go
+                  h3 Fishnet Chair
+                  h5 Seat and back with upholstery made of cold cure foam
+        +e.bottom-panel
+          +b.BUTTON.btn-show-more
+  // Products-range section ends 

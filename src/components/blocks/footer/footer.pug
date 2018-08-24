@@ -1,0 +1,44 @@
+mixin footer()
+  // Footer starts 
+  FOOTER
+    .container
+      .footer
+        +b.content
+          +e.contacts
+            h3 Contact us
+            p 132A Bridge Road Richmond VIC Australia.
+            p Talk to us on 1300 132 info@interior.com
+          +e.info
+            h3 Useful Information
+            +e.links
+              +e.col-1
+                A(href="#") Sales Terms
+                A(href="#") Customer Care
+                A(href="#") Delivery
+              +e.col-2
+                A(href="#") Architect Accounts
+                A(href="#") Careers
+                A(href="#") Exchanges & Returns
+          +e.stay-in-touch
+            h3 Let's stay in touch!
+            p Subscribe to know about our latest news, products and special offers just for subscribers.
+            +b.email-input
+              +e.INPUT(type="email", placeholder="your email address")
+              +e.BUTTON.btn-submit
+        +b.bot-panel
+          +e.copyright
+            | &copy; COPYRIGHT - INTERIOR 2016. ALL RIGHTS RESERVED.
+          +e.links
+            a(href="")
+              img(src="/assets/images/icon-facebook.png" alt="facebook")
+            a(href="")
+              img(src="/assets/images/icon-twitter.png" alt="twitter")
+            a(href="")
+              img(src="/assets/images/icon-googleplus.png" alt="googleplus")
+            a(href="")
+              img(src="/assets/images/icon-p.png" alt="p")
+          +e.privacy
+            A(href="#") TERMS & CONDITIONS
+            |  /
+            A(href="#") PRIVACY POLICY & COOKIES
+  // Footer ends

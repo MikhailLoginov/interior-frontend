@@ -1,0 +1,45 @@
+.hero
+  position relative
+  background url('/assets/images/slider-img.jpg') center
+  height 800px
+  &__content
+    display flex
+    flex-direction column
+    padding 369px 0 0 98px
+    max-width 490px
+    +below(768px)
+      padding-left 10px
+      padding-top 300px
+    h1, h3
+      text-transform uppercase
+    h5
+      font-weight 500
+      margin-top 12px
+      letter-spacing -0.35px
+  &__navi
+    position absolute
+    bottom 14px
+    left calc(50% - 60px)
+    display flex
+    align-items center
+    justify-content center
+
+.icon-navi
+  cursor pointer
+  width 52px
+  height 52px
+  opacity 0.75
+  transition all 0.25s
+  &:first-child
+    width 40px
+    height 40px
+    opacity 0.2
+  &:last-child
+    margin-left -3px
+    width 40px
+    height 40px
+    opacity 0.2
+  &:hover
+    opacity 0.6
+  &:active
+    opacity 0.5

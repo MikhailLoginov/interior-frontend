@@ -1,0 +1,35 @@
+mixin featured()
+  // Featured section starts 
+  SECTION.section-featured
+    .container
+      +b.featured
+        +e.panel
+          +e.UL.switcher
+            li.active
+              a(href="#") Featured
+            li  
+              a(href="#") New     
+          +b.BUTTON.btn-explore Explore all
+        +e.products
+          +b.small-product.small-product-1
+            +e.overlay
+              +e.BUTTON.btn-go
+              h3 Fishnet Chair
+              h5 Seat and back with upholstery made of cold cure foam
+          +b.small-product.small-product-2
+            +e.overlay
+              +e.BUTTON.btn-go
+              h3 Fishnet Chair
+              h5 Seat and back with upholstery made of cold cure foam
+          +b.small-product.small-product-3
+            +e.overlay
+              +e.BUTTON.btn-go
+              h3 Fishnet Chair
+              h5 Seat and back with upholstery made of cold cure foam
+          +b.small-product.small-product-4
+            +e.overlay
+              +e.BUTTON.btn-go
+              h3 Fishnet Chair
+              h5 Seat and back with upholstery made of cold cure foam
+  // Featured section ends
+

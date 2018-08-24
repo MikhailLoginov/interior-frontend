@@ -1,0 +1,218 @@
+body
+  font-family Montserrat, sans-serif
+
+.svg-sprite
+  display none
+
+.container
+  max-width 1366px
+  margin 0 auto
+
+h1
+  color #212121
+  font-size 62px
+  font-weight 100
+  letter-spacing -5px
+  word-spacing 15px
+
+h2
+  color #212121
+  font-size 36px
+  font-weight 700
+  letter-spacing -1.3px
+  @media screen and (max-width 768px)
+    font-size 24px
+    letter-spacing -0.3px
+  @media screen and (max-width 500px)
+    font-size 18px
+    letter-spacing -0.1px
+
+h3
+  color #43a047
+  font-size 18px
+  font-weight 700
+  letter-spacing 1.25px
+
+h4
+  color #6c6c6c
+  font-weight 300
+  font-size 22px
+  letter-spacing -0.3px
+
+h5
+  color #6c6c6c
+  font-size 14px
+  font-weight 500
+  line-height 24px
+  letter-spacing -0.35px
+
+a
+  text-decoration none
+  color #212121
+  font-weight 700
+  font-size 14px
+  letter-spacing 0.25px
+  transition all .25s
+  &:hover
+    color rgb(108, 108, 108)
+  &:active
+    color rgb(217, 222, 225) 
+
+p
+  letter-spacing -0.15px
+
+.strong
+  font-weight 700
+  color #212121
+
+.btn-order
+  cursor pointer
+  margin 30px 0 0 0
+  box-shadow 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35)
+  background-color #ffffff
+  width 181px
+  height 45px
+  line-height 45px
+  color  #212121
+  font-size 18px
+  font-weight 700
+  padding-left 31px
+  text-align left
+  border-radius 22px
+  text-transform uppercase
+  letter-spacing 3.8px
+  background transparent
+  &:hover
+    background url("assets/images/arrow.png") no-repeat 173px 16px
+  &:active
+    box-shadow 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.1)
+
+.btn-explore
+  cursor pointer
+  font-size 18px
+  font-weight 700
+  width 235px
+  height 45px
+  margin 11px 0 0 0
+  letter-spacing 3.5px
+  text-transform uppercase
+  background-color transparent
+  &:hover
+    background url("assets/images/arrow.png") no-repeat 205px 15px
+  &:active
+    color rgb(108, 108, 108)
+  @media screen and (max-width 500px)
+    font-size 10px
+    letter-spacing 1.5px
+    width 140px
+    margin -10px 0 0 0 !important
+
+.btn-show-more
+  background url("assets/images/icon-show-more.png") no-repeat center
+  width 60px
+  height 60px
+  cursor pointer
+  border-radius 50%
+  transition all .5s
+  &:hover
+    animation-name spin
+    animation-duration 2.5s
+    animation-iteration-count infinite
+    animation-timing-function linear
+  @keyframes spin 
+    25%
+      transform rotate(-90deg)
+    50%
+      transform rotate(-180deg)
+    75%
+      transform rotate(-270deg)
+    100%
+      transform rotate(-360deg)
+  &:active
+    background-color rgb(216, 244, 254)
+
+.email-input
+  position relative
+  width 295px
+  height 48px
+  @media screen and (max-width 500px)
+    width 200px
+  input
+    padding 0 53px 0 19px
+    width 100%
+    height 100%
+    background-color #ffffff
+    border 1px solid rgb(217, 222, 225)
+    color #6c6c6c
+    font-weight 300
+    font-size 14px
+    letter-spacing 0.55px
+  &__btn-submit
+    cursor pointer
+    background url("assets/images/submit.png") no-repeat center
+    width 45px
+    height 100%
+    position absolute
+    bottom 0
+    right -75px
+    transition all .5s
+    &:hover
+      transform scale(1.1, 1.1)
+  
+.product
+  position relative
+  width 370px
+  height 370px
+  margin 15px 0 15px 0
+  &.product-1
+    background url("assets/images/product-11.jpg") no-repeat
+  &.product-2
+    background url("assets/images/product-21.jpg") no-repeat
+  &.product-3
+    background url("assets/images/product-31.jpg") no-repeat
+  &.product-4
+    background url("assets/images/product-41.jpg") no-repeat
+  &.product-5
+    background url("assets/images/product-5.jpg") no-repeat
+  &.product-6
+    background url("assets/images/product-6.jpg") no-repeat
+  &__overlay
+    width 100%
+    height 100%
+    display flex
+    flex-direction column
+    text-align center
+    background-color white
+    opacity 0.9
+    display none
+    border 1px solid #9c9c9c
+    h3
+      margin-top 22px
+      color #212121
+      font-weight 700
+      font-size 22px
+    h5
+      color #6c6c6c
+      margin 23px 15px 0 15px
+      text-overflow ellipsis
+      max-height 50px
+      overflow hidden
+  &__btn-go
+    margin 82px 111px 0 111px
+    cursor pointer
+    border-radius 50%
+    width 48px
+    height 48px
+    background url("assets/images/arrow.png") no-repeat center
+    background-size 12px 18px
+    box-shadow 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35)
+    &:hover
+      background-color rgba(33, 33, 33, 0.1)
+    &:active
+      box-shadow 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.1)
+    transition all .25s
+  &:hover .product__overlay
+    position absolute
+    left 0
+    top 0
+    display block

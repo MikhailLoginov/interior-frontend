@@ -1,0 +1,11 @@
+extends ../layouts/main
+include ../blocks/header/header
+include ../blocks/hero/hero
+include ../blocks/footer/footer
+include ../blocks/scripts/scripts
+include ../blocks/products-range/products-range
+include ../blocks/promo/promo
+
+block content
+  +products-range()
+  +promo()
