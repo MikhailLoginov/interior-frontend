@@ -3,18 +3,15 @@
   SECTION.section-hero
     .container
       .hero
+        <el-carousel height="800px">
+          <el-carousel-item v-for="item in 3" :key="item">
+          </el-carousel-item>
+        </el-carousel>
         .hero__content
           h3 Trending
           h1 Fishnet Chair
           h5 Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black
           BUTTON.btn-order Order us
-        .hero__navi
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" class="icon-navi">
-            <path fillRule="evenodd" d="M 15 35C 6.72 35 0 28.28 0 20 0 11.72 6.72 5 15 5 23.28 5 30 11.72 30 20 30 28.28 23.28 35 15 35Z" fill="rgb(33,33,33)" opacity="1"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" class="icon-navi">
-            <path fillRule="evenodd" d="M 15 35C 6.72 35 0 28.28 0 20 0 11.72 6.72 5 15 5 23.28 5 30 11.72 30 20 30 28.28 23.28 35 15 35Z" fill="rgb(33,33,33)" opacity="1"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" class="icon-navi">
-            <path fillRule="evenodd" d="M 15 35C 6.72 35 0 28.28 0 20 0 11.72 6.72 5 15 5 23.28 5 30 11.72 30 20 30 28.28 23.28 35 15 35Z" fill="rgb(33,33,33)" opacity="1"/></svg>
   // Hero ends 
 </template>
 
@@ -27,11 +24,12 @@ export default {
 <style scoped lang="stylus">
 .hero
   position relative
-  background url('../../assets/images/slider-img.jpg') no-repeat center
   height 800px
   &__content
+    position relative
     display flex
     flex-direction column
+    z-index 3
     padding 369px 0 0 98px
     max-width 490px
     @media screen and (max-width 768px)
@@ -43,13 +41,6 @@ export default {
       font-weight 500
       margin-top 12px
       letter-spacing -0.35px
-  &__navi
-    position absolute
-    bottom 14px
-    left calc(50% - 60px)
-    display flex
-    align-items center
-    justify-content center
 
 .icon-navi
   cursor pointer
@@ -71,4 +62,36 @@ export default {
   &:active
     opacity 0.5
 </style>
+
+<style lang="stylus">
+.el-carousel
+  position absolute 
+  width 100%
+  height 800px
+.el-carousel__button
+  width 30px
+  height 30px
+  border-radius 50%
+  background rgba(0,0,0,0.2)
+  margin 0 1px
+  &:hover
+    opacity 0.6
+  &:active
+    opacity 0.5
+.el-carousel__indicator.is-active > .el-carousel__button
+  background rgba(0,0,0,0.75)
+  width 40px
+  height 40px
+  margin-top -5px
+.el-carousel__indicators
+  bottom 8px
+.el-carousel__item
+  &:nth-child(3n)
+    background url('../../assets/images/slider.jpg') no-repeat center
+  &:nth-child(3n+1)
+    background url('../../assets/images/slider-img.jpg') no-repeat center
+  &:nth-child(3n+2)
+    background-color rgba(0,0,0,0.1)
+</style>
+
 

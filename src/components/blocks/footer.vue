@@ -39,7 +39,7 @@
               img(src="../../assets/images/icon-p.png" alt="p")
           .bot-panel__privacy
             A(href="#") TERMS & CONDITIONS
-            |  /
+            |  / 
             A(href="#") PRIVACY POLICY & COOKIES
   // Footer ends
   
@@ -139,6 +139,10 @@ footer
     margin -7px 0 0 -20px
     a
       margin-right 1px
+      &:hover
+        opacity 0.7
+      &:active
+        opacity 0.4
     a:first-child
       margin-right 3px
 </style>

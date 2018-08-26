@@ -3,8 +3,6 @@
   SECTION.section-contacts
     .container
       .contacts
-        .contacts__top-panel
-          h1 Contact Us
         .contacts__content
           - for(let j = 0; j < 3; j++)
             .contact-card

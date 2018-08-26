@@ -24,14 +24,13 @@
           li
             a(href="#")
               h3 Classic
-        .products-range__products
-          - for(let j = 0; j < 2; j++)
-            - for (let i = 1; i < 7; i++) 
-              .product(class=`product-${i}`)
-                .product__overlay
-                  BUTTON.product__btn-go
-                  h3 Fishnet Chair
-                  h5 Seat and back with upholstery made of cold cure foam
+        draggable(v-model="products").products-range__products
+          div(v-for="product in products" :key="product.id" )
+            .product(:class="getProductClass(product)")
+              .product__overlay
+                BUTTON.product__btn-go
+                h3 Fishnet Chair
+                h5 Seat and back with upholstery made of cold cure foam
         .products-range__bottom-panel
           BUTTON.btn-show-more
   // Products-range section ends 
@@ -39,8 +38,111 @@
 </template>
 
 <script>
+
+import draggable from 'vuedraggable'
+import Products from '../products.vue'
+
 export default {
-  name: "ProductsRange"
+  name: "ProductsRange",
+  components: {
+    draggable,
+    Products
+  },
+  data: function() {
+    return {
+      products: [
+        {
+          id: "1",
+          name: "123",
+          description: "lorem fdsfsdfs",
+          price: "39,99",
+          image: "../../assets/images/product-11.jpg"
+        },
+        {
+          id: "2",
+          name: "222",
+          description: "lorem",
+          price: "29,99",
+          image: "../../assets/images/product-21.jpg"
+        },
+        {
+          id: "3",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-31.jpg"
+        },
+        {
+          id: "4",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-41.jpg"
+        },
+        {
+          id: "5",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-5.jpg"
+        },
+        {
+          id: "6",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-6.jpg"
+        },
+        {
+          id: "7",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-6.jpg"
+        },
+        {
+          id: "8",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-6.jpg"
+        },
+        {
+          id: "9",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-6.jpg"
+        },
+        {
+          id: "10",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-6.jpg"
+        },
+        {
+          id: "11",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-6.jpg"
+        },
+        {
+          id: "12",
+          name: "333",
+          description: "loresdfs",
+          price: "19,99",
+          image: "../../assets/images/product-6.jpg"
+        },
+      ]
+    }
+  },
+  methods: {
+    getProductClass(product) {
+      return `product-${product.id}`;
+    }
+  }
 }
 </script>
 

@@ -3,18 +3,15 @@
   SECTION.section-slider
     .container
       .slider
+        <el-carousel height="800px">
+          <el-carousel-item v-for="item in 3" :key="item">
+          </el-carousel-item>
+        </el-carousel>
         .slider__content
           h3 Hot deal
           h1 Fishnet Chair
           h5 Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black
           BUTTON.btn-order Order us
-        .slider__navi
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" class="icon-navi">
-            <path fillRule="evenodd" d="M 15 35C 6.72 35 0 28.28 0 20 0 11.72 6.72 5 15 5 23.28 5 30 11.72 30 20 30 28.28 23.28 35 15 35Z" fill="rgb(33,33,33)" opacity="1"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" class="icon-navi">
-            <path fillRule="evenodd" d="M 15 35C 6.72 35 0 28.28 0 20 0 11.72 6.72 5 15 5 23.28 5 30 11.72 30 20 30 28.28 23.28 35 15 35Z" fill="rgb(33,33,33)" opacity="1"/></svg>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 40 40" class="icon-navi">
-            <path fillRule="evenodd" d="M 15 35C 6.72 35 0 28.28 0 20 0 11.72 6.72 5 15 5 23.28 5 30 11.72 30 20 30 28.28 23.28 35 15 35Z" fill="rgb(33,33,33)" opacity="1"/></svg>
   // Slider section ends 
   
 </template>
@@ -29,9 +26,10 @@ export default {
 .slider
   margin-top 105px
   position relative
-  background url('../../assets/images/slider.jpg') no-repeat center
   height 800px
   &__content
+    position relative
+    z-index 3
     display flex
     flex-direction column
     padding 284px 0 0 98px
