@@ -1,4 +1,7 @@
 <script>
+
+// TO DO: this file not yet done
+
 export default {
   name: "Products",
   data: function() {

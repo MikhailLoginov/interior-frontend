@@ -24,13 +24,20 @@
           li
             a(href="#")
               h3 Classic
-        draggable(v-model="products").products-range__products
+        //draggable(v-model="products").products-range__products
           div(v-for="product in products" :key="product.id" )
             .product(:class="getProductClass(product)")
               .product__overlay
                 BUTTON.product__btn-go
                 h3 Fishnet Chair
                 h5 Seat and back with upholstery made of cold cure foam
+        div(v-model="products").products-range__products
+          div(v-for="product in products" :key="product.id" draggable="true" @dragstart="dragStart")
+            .product(:class="getProductClass(product)" draggable="true")
+              .product__overlay
+                BUTTON.product__btn-go
+                h3 Fishnet Chair
+                h5 Seat and back with upholstery made of cold cure foam        
         .products-range__bottom-panel
           BUTTON.btn-show-more
   // Products-range section ends 
@@ -39,14 +46,12 @@
 
 <script>
 
-import draggable from 'vuedraggable'
-import Products from '../products.vue'
+// import Products from '../products.vue'
 
 export default {
   name: "ProductsRange",
   components: {
-    draggable,
-    Products
+    // Products
   },
   data: function() {
     return {
@@ -141,6 +146,14 @@ export default {
   methods: {
     getProductClass(product) {
       return `product-${product.id}`;
+    },
+
+    dragStart(ev) {
+      ev.dataTransfer.effectAllowed='move';
+
+      // TO DO: Transfer product here!
+      ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));   
+      ev.dataTransfer.setDragImage(ev.target,100,100);
     }
   }
 }

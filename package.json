@@ -26,8 +26,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-router": "^3.0.1",
-    "vue-template-compiler": "^2.5.17",
-    "vuedraggable": "^2.16.0"
+    "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
     "root": true,
