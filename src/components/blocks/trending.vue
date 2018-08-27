@@ -11,32 +11,32 @@
             .product__overlay
               BUTTON.product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
           .product.product-2
             .product__overlay
               BUTTON.product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
           .product.product-3
             .product__overlay
               BUTTON.product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
           .product.product-4
             .product__overlay
               BUTTON.product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
           .product.product-5
             .product__overlay
               BUTTON.product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
           .product.product-6
             .product__overlay
               BUTTON.product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
   // Trending section ends 
   
 </template>

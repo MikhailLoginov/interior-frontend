@@ -8,14 +8,14 @@
             .contact-card
               img(src="../../assets/images/icon-location.png" alt="location")
               h3 CALIFORNIA
-              h5.ttl Phone:
+              p.ttl Phone:
               a(href="tel:190012345678")
-                h5.strong 1900 - 1234 - 5678
-              h5.ttl Email:
+                p.strong 1900 - 1234 - 5678
+              p.ttl Email:
               a(href="mailto:info@interior.com")
-                h5.strong info@interior.com
-              h5.ttl Address:
-              h5 12 W 1st St. 90001 Los Angeles, California
+                p.strong info@interior.com
+              p.ttl Address:
+              p 12 W 1st St. 90001 Los Angeles, California
   // Contacts section ends 
   
 </template>

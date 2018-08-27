@@ -15,22 +15,22 @@
             .small-product__overlay
               BUTTON.small-product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
           .small-product.small-product-2
             .small-product__overlay
               BUTTON.small-product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
           .small-product.small-product-3
             .small-product__overlay
               BUTTON.small-product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
           .small-product.small-product-4
             .small-product__overlay
               BUTTON.small-product__btn-go
               h3 Fishnet Chair
-              h5 Seat and back with upholstery made of cold cure foam
+              p Seat and back with upholstery made of cold cure foam
   // Featured section ends
 </template>
 
@@ -125,7 +125,7 @@ export default {
       color #212121
       font-weight 700
       font-size 22px
-    h5
+    p
       color #6c6c6c
       margin 23px 10px 0 10px
       text-overflow ellipsis

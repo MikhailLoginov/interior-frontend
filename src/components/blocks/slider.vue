@@ -10,7 +10,7 @@
         .slider__content
           h3 Hot deal
           h1 Fishnet Chair
-          h5 Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black
+          p Seat and back with upholstery made of cold cure foam. Steel frame, available in matt powder-coated black
           BUTTON.btn-order Order us
   // Slider section ends 
   
@@ -28,19 +28,21 @@ export default {
   position relative
   height 800px
   &__content
-    position relative
+    position absolute
     z-index 3
     display flex
     flex-direction column
-    padding 284px 0 0 98px
-    @media screen and (max-width 768px)
-      padding 284px 0 0 10px
+    //padding 284px 0 0 98px
+    top 40%
+    left 10%
+    //@media screen and (max-width 768px)
+    //  padding 284px 0 0 10px
     max-width 468px
     h1, h3
       text-transform uppercase
     h3
       color #e53935
-    h5
+    p
       margin-top 12px
   &__navi
     position absolute

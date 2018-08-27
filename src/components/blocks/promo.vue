@@ -6,12 +6,12 @@
         .large-product.large-product-1
           h3 Exclusive
           h2 Fishnet Chair
-          h5 Seat and back with upholstery made of cold cure foam. Steel frame, available in matt
+          p Seat and back with upholstery made of cold cure foam. Steel frame, available in matt
           BUTTON.btn-order Order us
         .large-product.large-product-2
           h3 Exclusive
           h2 Fishnet Chair
-          h5 Seat and back with upholstery made of cold cure foam. Steel frame, available in matt
+          p Seat and back with upholstery made of cold cure foam. Steel frame, available in matt
           BUTTON.btn-order Order us
   // Promo section ends 
 </template>
@@ -42,7 +42,7 @@ export default {
       padding 0 0 8px 50px
       @media screen and (max-width 768px)
         padding-left 10px
-    h5
+    p
       max-width 400px
       padding-left 51px
       @media screen and (max-width 768px)

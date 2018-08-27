@@ -37,7 +37,7 @@
               .product__overlay
                 BUTTON.product__btn-go
                 h3 Fishnet Chair
-                h5 Seat and back with upholstery made of cold cure foam        
+                p Seat and back with upholstery made of cold cure foam        
         .products-range__bottom-panel
           BUTTON.btn-show-more
   // Products-range section ends 
@@ -244,7 +244,7 @@ export default {
       color #212121
       font-weight 700
       font-size 22px
-    h5
+    p
       color #6c6c6c
       margin 23px 10px 0 10px
       text-overflow ellipsis

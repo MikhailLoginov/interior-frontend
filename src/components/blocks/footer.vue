@@ -75,6 +75,7 @@ footer
     font-weight 300
     line-height 22px
     margin 14px 0 22px 0
+    letter-spacing -0.15px
   &__contacts
     padding-right 5px
     p
