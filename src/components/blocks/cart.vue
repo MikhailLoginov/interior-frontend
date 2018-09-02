@@ -4,34 +4,15 @@
     .container
       .products-range
         .products-range__top-panel
-          h1 Our Products Range
-        UL.products-range__switcher
-          li.active
-            a(href="#") 
-              h3 All
-          li  
-            a(href="#")
-              h3 Home
-          li
-            a(href="#")
-              h3 Office
-          li
-            a(href="#")
-              h3 Furniture
-          li
-            a(href="#")
-              h3 Modern
-          li
-            a(href="#")
-              h3 Classic
+          h1 Your Cart
         .products-range__products
-          .product(v-for="product in $root.products" :key="product.id" :class="getProductClass(product)" draggable="true" @dragstart="dragStart(product)")
+          .product(v-for="product in $root.cart" :class="getProductClass(product)")
             .product__overlay
               BUTTON.product__btn-go
               h3 {{product.name}}
-              p {{product.description}}        
-        .products-range__bottom-panel
-          BUTTON.btn-show-more
+              p {{product.description}}
+        BUTTON(v-show="$root.cart.length != 0").btn-order Order Now
+        .empty-cart(v-show="$root.cart.length == 0") Your cart is empty
   // Products-range section ends 
   
 </template>
@@ -39,13 +20,10 @@
 <script>
 
 export default {
-  name: "ProductsRange",
+  name: "CartComp",
   methods: {
     getProductClass(product) {
       return `product-${product.id}`;
-    },
-    dragStart(product) {
-      this.$root.currProduct = JSON.parse(JSON.stringify(product));
     }
   }
 }
@@ -76,41 +54,19 @@ export default {
       width 300px
     @media screen and (max-width 768px)
       margin 50px 0 0 10px
-    li
-      display inline-block
-      @media screen and (max-width 560px)
-        display block
-      font-weight 700
-      padding 0 17px 17px 0
-      margin-right 7px
-      @media screen and (max-width 800px)
-        padding 0 10px 10px 2px
-      h3
-        text-transform uppercase
-        @media screen and (max-width 768px)
-          font-size 14px
-        color #6c6c6c
-        text-decoration none
-        &:hover
-          color rgb(156, 156, 156) !important
-        &:active
-          color rgb(217, 222, 225) !important
-      &.active
-        padding 0 29px 15px 5px !important
-        border-bottom 3px solid #212121 !important
-        @media screen and (max-width 600px)
-          padding 0 10px 8px 2px !important
-        @media screen and (max-width 560px)
-          border none !important
-        h3
-          color #212121 !important
-          &:hover
-            color rgb(108, 108, 108) !important
-          &:active
-            color rgb(217, 222, 225) !important
   .btn-explore
     @media screen and (max-width 600px)
       margin 0
+
+  .btn-order
+    width 200px
+    margin-left 100px
+    &:hover
+      background url("../../assets/images/arrow.png") no-repeat 193px 16px
+      color #212121
+
+  .empty-cart
+    margin 100px
 
   &__products
     margin 35px 82px 0 82px

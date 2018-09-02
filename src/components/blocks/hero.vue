@@ -30,7 +30,6 @@ export default {
     display flex
     flex-direction column
     z-index 3
-    //padding 369px 0 0 98px
     top 50%
     left 8%
     max-width 468px
@@ -60,14 +59,23 @@ export default {
     opacity 0.6
   &:active
     opacity 0.5
-</style>
 
-<style lang="stylus">
 .el-carousel
   position absolute 
   width 100%
   height 800px
-.el-carousel__button
+.el-carousel__item
+  &:nth-child(3n)
+    background url('../../assets/images/slider.jpg') no-repeat center
+  &:nth-child(3n+1)
+    background url('../../assets/images/slider-img.jpg') no-repeat center
+  &:nth-child(3n+2)
+    background url('../../assets/images/slider-img.jpg') no-repeat center
+
+</style>
+
+<style lang="stylus">
+.el-carousel__indicator > .el-carousel__button
   width 30px
   height 30px
   border-radius 50%
@@ -77,6 +85,7 @@ export default {
     opacity 0.6
   &:active
     opacity 0.5
+
 .el-carousel__indicator.is-active > .el-carousel__button
   background rgba(0,0,0,0.75)
   width 40px
@@ -84,13 +93,4 @@ export default {
   margin-top -5px
 .el-carousel__indicators
   bottom 8px
-.el-carousel__item
-  &:nth-child(3n)
-    background url('../../assets/images/slider.jpg') no-repeat center
-  &:nth-child(3n+1)
-    background url('../../assets/images/slider-img.jpg') no-repeat center
-  &:nth-child(3n+2)
-    background-color rgba(0,0,0,0.1)
 </style>
-
-

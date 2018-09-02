@@ -32,11 +32,8 @@ export default {
     z-index 3
     display flex
     flex-direction column
-    //padding 284px 0 0 98px
     top 40%
     left 10%
-    //@media screen and (max-width 768px)
-    //  padding 284px 0 0 10px
     max-width 468px
     h1, h3
       text-transform uppercase
@@ -72,4 +69,36 @@ export default {
     opacity 0.6
   &:active
     opacity 0.5
+
+.el-carousel
+  position absolute 
+  width 100%
+  height 800px
+.el-carousel__item
+  &:nth-child(3n)
+    background url('../../assets/images/slider.jpg') no-repeat center
+  &:nth-child(3n+1)
+    background url('../../assets/images/slider-img.jpg') no-repeat center
+  &:nth-child(3n+2)
+    background url('../../assets/images/slider-img.jpg') no-repeat center
+</style>
+
+<style lang="stylus">
+.el-carousel__indicator > .el-carousel__button
+  width 30px
+  height 30px
+  border-radius 50%
+  background rgba(0,0,0,0.2)
+  margin 0 1px
+  &:hover
+    opacity 0.6
+  &:active
+    opacity 0.5
+.el-carousel__indicator.is-active > .el-carousel__button
+  background rgba(0,0,0,0.75)
+  width 40px
+  height 40px
+  margin-top -5px
+.el-carousel__indicators
+  bottom 8px
 </style>

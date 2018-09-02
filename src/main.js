@@ -1,38 +1,52 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import { DatePicker, Notification, Carousel, CarouselItem } from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-import lang from 'element-ui/lib/locale/lang/en'
-import locale from 'element-ui/lib/locale'
+import router from './router.js'
 import App from './App.vue'
-import Index from './components/pages/index.vue'
-import ContactsPage from './components/pages/contacts-page.vue'
-import ProductPage from './components/pages/product-page.vue'
-import Showroom from './components/pages/showroom.vue'
-
-locale.use(lang);
-Vue.use(DatePicker, {locale});
-Vue.use(Carousel);
-Vue.use(CarouselItem);
-Vue.prototype.$notify = Notification;
+import './plugins.js'
+import Vuex from 'vuex'
+import products from './data/products.js'
 
 Vue.config.productionTip = false;
 
-Vue.use(VueRouter);
-
-const routes = [
-  {path: '/', component: Index},
-  {path: '/contacts', component: ContactsPage},
-  {path: '/product', component: ProductPage},
-  {path: '/showroom', component: Showroom}
-];
-
-const router = new VueRouter({
-  mode: "history",
-  routes
-});
+const store = new Vuex.Store({
+  /*state: {
+    products: [],
+    cart: [
+      {
+        id: "1",
+        name: "123",
+        description: "lorem fdsfsdfs",
+        price: "39,99",
+        image: "../../assets/images/product-11.jpg"
+      }
+    ]
+  },
+  getters: {
+    products: state => {
+      return state.products;
+    },
+    cart: state => {
+      return state.cart;
+    }
+  },
+  actions: {
+    addProductToCart(product) {
+      this.state.cart.push(product);
+    }
+  },
+  mutations: {
+    setCart (state, cart) {
+      state.cart = cart
+    }
+  }*/
+})
 
 new Vue({
   router,
+  store,
+  data: {
+    products,
+    cart: [],
+    currProduct: []
+  },
   render: h => h(App)
 }).$mount('#app')
