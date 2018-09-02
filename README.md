@@ -27,3 +27,8 @@ npm run build
 ```
 npm run lint
 ```
+
+### Tests
+```
+npm run test:e2e
+```

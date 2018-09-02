@@ -27,7 +27,7 @@
         .products-range__products
           .product(v-for="product in $root.products" :key="product.id" :class="getProductClass(product)" draggable="true" @dragstart="dragStart(product)")
             .product__overlay
-              BUTTON.product__btn-go
+              BUTTON(@click="$root.cart.push(product)").product__btn-go
               h3 {{product.name}}
               p {{product.description}}        
         .products-range__bottom-panel
