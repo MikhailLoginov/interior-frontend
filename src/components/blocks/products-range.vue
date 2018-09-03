@@ -25,7 +25,7 @@
             a(href="#")
               h3 Classic
         .products-range__products
-          .product(v-for="product in $root.products" :key="product.id" :class="getProductClass(product)" draggable="true" @dragstart="dragStart(product)")
+          .product(v-for="product in $root.products" :key="product.id" :class="getProductClass(product)" draggable="true" @dragstart="dragStart(product)" :style="{ 'background-image' : 'url(' + product.image + ')' }")
             .product__overlay
               BUTTON(@click="$root.cart.push(product)").product__btn-go
               h3 {{product.name}}
