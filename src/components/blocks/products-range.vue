@@ -9,7 +9,7 @@
           li.active
             a(href="#") 
               h3 All
-          li  
+          li
             a(href="#")
               h3 Home
           li
@@ -25,13 +25,14 @@
             a(href="#")
               h3 Classic
         .products-range__products
-          .product(v-for="product in $root.products" :key="product.id" :class="getProductClass(product)" draggable="true" @dragstart="dragStart(product)" :style="{ 'background-image' : 'url(' + product.image + ')' }")
+          .product(v-for="product in $root.products.slice(0,currLength)" :key="product.id" :class="getProductClass(product)" draggable="true" @dragstart="dragStart(product)" 
+            :style="{ 'background' : 'url(' + product.image + ') no-repeat center', 'background-size' : 'cover' }")
             .product__overlay
               BUTTON(@click="$root.cart.push(product)").product__btn-go
               h3 {{product.name}}
               p {{product.description}}        
         .products-range__bottom-panel
-          BUTTON.btn-show-more
+          BUTTON(@click="currLength+=3" v-show="$root.products[currLength]").btn-show-more
   // Products-range section ends 
   
 </template>
@@ -40,6 +41,11 @@
 
 export default {
   name: "ProductsRange",
+  data() {
+    return {
+      currLength: 6
+    }
+  },
   methods: {
     getProductClass(product) {
       return `product-${product.id}`;

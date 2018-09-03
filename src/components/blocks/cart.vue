@@ -6,7 +6,8 @@
         .products-range__top-panel
           h1 Your Cart
         .products-range__products
-          .product(v-for="product in $root.cart" :class="getProductClass(product)" :style="{ 'background-image' : 'url(' + product.image + ')' }")
+          .product(v-for="product in $root.cart" :class="getProductClass(product)" 
+            :style="{ 'background' : 'url(' + product.image + ') no-repeat center', 'background-size' : 'cover' }")
             .product__overlay
               BUTTON.product__btn-go
               h3 {{product.name}}

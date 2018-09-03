@@ -19,3 +19,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+#Test Reports
+selenium-debug.log
+tests/e2e/reports
